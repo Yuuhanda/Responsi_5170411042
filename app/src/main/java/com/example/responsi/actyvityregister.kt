@@ -4,7 +4,14 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import org.w3c.dom.Text
+import android.widget.TextView
+import android.widget.*
+import android.view.View
+
 import kotlinx.android.synthetic.main.register.*
+
+
 import android.widget.EditText
 import android.widget.Button
 
@@ -13,20 +20,20 @@ class actyvityregister : AppCompatActivity() {
     private lateinit var datUsername: EditText
     private lateinit var datEmail: EditText
     private lateinit var datPassword: EditText
-    private lateinit var datKonfirmasiPassword: EditText
+
     private lateinit var datTanggalLahir: EditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.register)
 
-        datUsername = findViewById(R.id.username_daftar)
+        datUsername = findViewById(R.id.username_judul_daftar)
         datEmail = findViewById(R.id.email_daftar)
         datPassword = findViewById(R.id.password_daftar)
         datTanggalLahir = findViewById(R.id.tanggal_lahir_daftar)
-        datKonfirmasiPassword = findViewById(R.id.password_ulang_daftar)
 
-        if (datEmail!=null){
+
+
         button_daftar.setOnClickListener {
 
             val intent = Intent(this, dashboardact::class.java)
@@ -35,11 +42,9 @@ class actyvityregister : AppCompatActivity() {
             intent.putExtra("dataPassword", datPassword.text.toString())
             intent.putExtra("dataTanggal", datTanggalLahir.text.toString())
 
-
-            intent.putExtras(intent)
             startActivity(intent)
         }
-        }
+
     }
 
 
