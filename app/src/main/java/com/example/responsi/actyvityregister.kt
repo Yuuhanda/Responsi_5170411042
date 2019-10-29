@@ -26,18 +26,19 @@ class actyvityregister : AppCompatActivity() {
         datTanggalLahir = findViewById(R.id.tanggal_lahir_daftar)
         datKonfirmasiPassword = findViewById(R.id.password_ulang_daftar)
 
-        button_daftar.setOnClickListener{
-            if (datEmail != null) {
-                val intent = Intent(this, dashboardact::class.java)
-                intent.putExtra("dataUsername", datUsername.text.toString())
-                intent.putExtra("dataEmail", datEmail.text.toString())
-                intent.putExtra("dataPassword", datPassword.text.toString())
-                intent.putExtra("dataTanggal", datTanggalLahir.text.toString())
+        if (datEmail!=null){
+        button_daftar.setOnClickListener {
 
-                val intent = Intent(this, dashboardact::class.java)
-                intent.putExtras(intent)
-                startActivity(intent)
-            }
+            val intent = Intent(this, dashboardact::class.java)
+            intent.putExtra("dataUsername", datUsername.text.toString())
+            intent.putExtra("dataEmail", datEmail.text.toString())
+            intent.putExtra("dataPassword", datPassword.text.toString())
+            intent.putExtra("dataTanggal", datTanggalLahir.text.toString())
+
+            val intent = Intent(this, dashboardact::class.java)
+            intent.putExtras(intent)
+            startActivity(intent)
+        }
         }
     }
 
