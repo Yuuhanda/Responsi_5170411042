@@ -35,7 +35,7 @@ class actyvityregister : AppCompatActivity() {
             intent.putExtra("dataPassword", datPassword.text.toString())
             intent.putExtra("dataTanggal", datTanggalLahir.text.toString())
 
-            val intent = Intent(this, dashboardact::class.java)
+
             intent.putExtras(intent)
             startActivity(intent)
         }
