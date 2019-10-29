@@ -4,7 +4,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import kotlinx.android.synthetic.main.register
 import kotlinx.android.synthetic.main.register.*
 import android.widget.EditText
 import android.widget.Button
